@@ -1,0 +1,46 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    /* Set a height for the hero section */
+    overflow: hidden;
+    margin-top: 30px;
+    /* Space below navbar */
+    text-align: center;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    /* Use 100% height to fill the parent */
+    object-fit: cover;
+    /* Ensures the image covers the area */
+    filter: blur(3px) brightness(0.6);
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.hero-text {
+    font-family: 'Gagalin', sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 3;
+}

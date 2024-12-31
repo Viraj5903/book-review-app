@@ -1,0 +1,19 @@
+.book-edit-loading-message {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3498db;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.book-edit-error-message {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+}

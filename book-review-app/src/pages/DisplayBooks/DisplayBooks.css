@@ -1,0 +1,86 @@
+/* Global Font */
+@font-face {
+    font-family: 'Gagalin';
+    src: url('/src/assets/fonts/Gagalin-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Page Structure */
+.books-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* Books Container */
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 20px;
+    width: 80%;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* No Books Message Styling */
+.no-books-message {
+    font-size: 1.5rem;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Loading Spinner */
+.loading-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Spinner styling */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation for spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading message styling */
+.loading-message p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}

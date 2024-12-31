@@ -1,0 +1,131 @@
+/* Featured Book Page Specific Styles */
+.featured-book-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Specific to this page */
+    backdrop-filter: blur(15px);
+    /* Soft blur effect like About Us */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    /* Consistent shadow */
+    border-radius: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-book-page:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Flex Container */
+.featured-book-page .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    margin-top: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Specific to this page */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.featured-book-page .content-wrapper:hover {
+    transform: scale(1.02);
+    /* Hover scaling for this specific container */
+    box-shadow: 0 6px 12px rgba(51, 0, 255, 0.2);
+}
+
+/* Book Cover */
+.featured-book-page .book-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.featured-book-page .book-cover {
+    width: 280px;
+    /* Specific size for this page */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.featured-book-page .book-cover:hover {
+    transform: scale(1.1);
+    /* Hover scaling for this specific cover */
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    /* Hover shadow consistency */
+}
+
+/* Book Details */
+.featured-book-page .book-details {
+    flex: 2;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Specific to this page */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.featured-book-page .book-details:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Lighter on hover */
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    /* Hover shadow consistency */
+}
+
+/* Title and Text */
+.featured-book-page .book-title {
+    font-family: 'Gagalin', sans-serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.featured-book-page .book-title:hover {
+    transform: scale(1.05);
+    color: #3498db;
+    /* Consistent hover color */
+}
+
+.featured-book-page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    /* Harmonizing fonts */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featured-book-page .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .featured-book-page .book-cover {
+        width: 100%;
+    }
+
+    .featured-book-page .book-details {
+        padding: 20px;
+    }
+}

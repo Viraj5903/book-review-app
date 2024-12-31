@@ -1,0 +1,169 @@
+/* Book Item Styling */
+.book-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.book-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Hover effect for the book item */
+.book-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(255, 0, 150, 0.4), 0 12px 20px rgba(0, 123, 255, 0.4);
+    z-index: 3;
+}
+
+/* Book cover image */
+.book-cover {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.book-item:hover .book-cover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Text Styles */
+.book-title {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Helvetica', sans-serif;
+    margin: 10px 0 5px;
+}
+
+.book-author {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.book-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* Delete button styling */
+.delete-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the delete button */
+.delete-button:hover {
+    transform: scale(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Modal Buttons */
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Confirm Button */
+.modal-btn.confirm {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+}
+
+.modal-btn.confirm:hover {
+    background-color: #e60000;
+}
+
+/* Cancel Button */
+.modal-btn.cancel {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.modal-btn.cancel:hover {
+    background-color: #0056b3;
+}
